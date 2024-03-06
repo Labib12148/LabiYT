@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>YTAdvisor</title>
+  <link rel="icon" href="chat.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="title">
+      <img src="chat.png" alt="YTAdvisor" class="title-image">
+      YTAdvisor
+  </a>
+    </nav>
+  <div class="clear-chat-container">
+    <button class="clear-chat-button" onclick="clearChat()">Clear Chat</button>
+  </div>
+  <div class="chat-container" id="chat-container"></div>
+  <div class="input-container">
+    <input type="text" class="input-field" id="prompt" name="prompt" placeholder="Message YTAdvisor...">
+    <button class="send-button" onclick="sendMessage()">Send</button>
+    <div class="loading-indicator" id="loading-indicator">Loading...</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
