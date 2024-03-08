@@ -1,19 +1,14 @@
-* {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #181818;
+  color: #fff;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #181818; /* Dark background similar to YouTube's dark mode */
-  color: #fff; /* Light text similar to YouTube's dark mode */
+  transition: all 0.3s ease;
 }
 
 .navbar {
-  top: 0;
-  background-color: #212121; /* Dark navbar similar to YouTube's dark mode */
+  background-color: #212121;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
   width: 100%;
@@ -21,150 +16,197 @@ body {
   position: fixed;
 }
 
-.title {
+.navbar-brand {
+  color: #fff;
   font-size: 24px;
   font-weight: bold;
-  color: #fff; /* Light text similar to YouTube's dark mode */
-  text-decoration: none;
-  display: flex;
-  align-items: center;
 }
 
-.title-image {
-    width: 40px; /* Adjust the width as needed */
-    height: auto; /* Automatically adjust height to maintain aspect ratio */
-    margin-right: 5px; /* Add margin to the right for spacing */
-}
-.clear-chat-container {
-  margin-top: 15px;
-  margin-left: 15px;
-  position: absolute;
-  top: 50px;
-}
-
-.chat-container {
-  background-color: #212121; /* Dark chat container similar to YouTube's dark mode */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 1200px;
-  height: calc(87vh - 130px);
-  padding: 20px;
-  border-radius: 8px;
-  margin: 120px auto 20px auto;
-  overflow-y: auto;
-  color: #fff; /* Light text similar to YouTube's dark mode */
-}
-
-.input-container {
-  background-color: #212121; /* Dark input container similar to YouTube's dark mode */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.input-field {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #333; /* Slightly lighter border similar to YouTube's dark mode */
-  border-radius: 4px;
-  font-size: 16px;
-  margin-right: 10px;
-  max-width: calc(100% - 90px);
-  background-color: #333; /* Darker input field background similar to YouTube's dark mode */
-  color: #fff; /* Light text similar to YouTube's dark mode */
-}
-
-.clear-chat-button,
-.send-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.navbar-nav .nav-link {
   color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
-.clear-chat-button {
-  background-color: #ff0000; /* YouTube's red button */
-}
-
-.send-button {
-  background-color: #007bff; /* YouTube's blue button */
-  max-width: 150px;
-}
-
-.clear-chat-button:hover {
-  background-color: #ff3333; /* Lighter red on hover */
-}
-
-.send-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
-
-.message-gap {
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-
-.file-name {
-  margin-top: 10px;
+.jumbotron {
+  background-color: #212121;
+  color: #fff;
+  padding: 100px 0;
   text-align: center;
-  color: #3b3b3b;
+}
+
+.jumbotron h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.jumbotron button {
+  font-size: 18px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  background-color: #fff;
+  color: #7f8fa6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.jumbotron button:hover {
+  background-color: #5c677d;
+  color: #fff;
+}
+
+.features {
+  background-color: #212121;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.feature-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
+  border-radius: 12px;
+  height: 170px;
+}
+
+.featured-comments {
+  background-color: #212121;
+  color: #fff; 
+  padding: 100px 0;
+  text-align: center;
+}
+
+.featured-comments h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.featured-comments-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.featured-comments-card p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.featured-comments-card small {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.about {
+  background-color: #212121;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.about p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.about-section {
+  text-align: left;
+}
+
+.faq {
+  background-color: #212121;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.faq-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.faq-list li {
+  margin-bottom: 20px;
+}
+
+.faq-list h3 {
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 10px;
-  margin-left: 5px;
 }
 
-.clear-chat-container {
-  margin-top: 15px;
-  margin-left: 15px;
+.faq-list p {
+  font-size: 18px;
+  margin-bottom: 0;
 }
 
-.loading-indicator {
-  display: none;
-  margin-left: 10px;
+.faq-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  height: 160px;
 }
 
-.user-message,
-.YTAdvisor-message {
-  margin-bottom: 10px;
-  display: flex;
-  align-self: flex-start;
-  align-items: center;
+.faq-card .card-body {
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 30px;
 }
 
-.avatar {
-  margin-right: 10px;
-  width: 30px;
-  height: 30px;
-  align-self: flex-start;
-  vertical-align: middle;
-  display: inline-block; /* Ensures the avatar and message are displayed on the same line */
+.faq-card .card-title {
+  font-weight: bold;
 }
 
+.contact {
+  background-color: #212121;
+  text-align: center;
+}
 
-@media only screen and (max-width: 600px) {
-  .chat-container {
-    height: 56vh;
-  }
+.contact h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
 
-  .input-container {
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 10px;
-  }
+.contact-info p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
 
-  .input-field {
-    flex: 1 1 calc(100% - 140px);
-    margin: 10px 0;
-    max-width: calc(100% - 80px);
-  }
+footer {
+  background-color: #181818;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 18px;
+  margin-bottom: 0;
 }

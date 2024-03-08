@@ -1,29 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>YTAdvisor</title>
-  <link rel="icon" href="chat.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabiYT - Your Youtube Reccomendation Bot</title>
+    <link rel="icon" href="./ytbot/chat.png" type="image/png">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar">
-    <a href="/" class="title">
-      <img src="chat.png" alt="YTAdvisor" class="title-image">
-      YTAdvisor
-  </a>
-    </nav>
-  <div class="clear-chat-container">
-    <button class="clear-chat-button" onclick="clearChat()">Clear Chat</button>
-  </div>
-  <div class="chat-container" id="chat-container"></div>
-  <div class="input-container">
-    <input type="text" class="input-field" id="prompt" name="prompt" placeholder="Message YTAdvisor...">
-    <button class="send-button" onclick="sendMessage()">Send</button>
-    <div class="loading-indicator" id="loading-indicator">Loading...</div>
-  </div>
 
-  <script src="script.js"></script>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img style="width: 50px; margin-right: 2px; margin-bottom: 10px;" src="./ytbot/chat.png" alt="image">
+            LabiYT
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#featured-comments">Featured Comments</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About LabiYT</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="jumbotron">
+    <div class="container">
+        <h1>Welcome to LabiYT</h1>
+        <p>Your Cool Virtual Assistant</p>
+        <button class="btn btn-primary" id="LabiYT-button">Try LabiYT</button>
+    </div>
+</section>
+
+<script>
+    document.getElementById("LabiYT-button").onclick = function() {
+        window.location.href = "./ytbot/labiyt.html";
+    };
+</script>
+
+<!-- Features Section -->
+<section id="features" class="features">
+    <div class="container">
+        <h2>Features</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card feature-item">
+                    <div class="card-body">
+                        <h3 class="card-title">24/7 Availability</h3>
+                        <p class="card-text">Get recommendations anytime, anywhere.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-item">
+                    <div class="card-body">
+                        <h3 class="card-title">Personalized Assistance</h3>
+                        <p class="card-text">Receive recommendations according to your needs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-item">
+                    <div class="card-body">
+                        <h3 class="card-title">Real-time Adaptation</h3>
+                        <p class="card-text">Continuously learns and adapts to your behavior for up-to-date recommendations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-item">
+                    <div class="card-body">
+                        <h3 class="card-title">Content Diversity</h3>
+                        <p class="card-text">Experience a wide range of topics, creators, and perspectives to enrich your YouTube journey.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-item">
+                    <div class="card-body">
+                        <h3 class="card-title">Multi-language Support</h3>
+                        <p class="card-text">Enjoy personalized recommendations in your preferred language, catering to users from various linguistic backgrounds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Featured Comments Section -->
+<section id="featured-comments" class="featured-comments">
+    <div class="container">
+        <h2>Featured Comments</h2>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="featured-comments-card">
+                    <p>"LabiYT saved my valuable time by it's good recommendations!"</p>
+                    <small>- Labitto</small>
+                </div>
+            </div>
+            <div class="col-md-6 mx-auto">
+                <div class="featured-comments-card">
+                    <p>"I'm amazed by LabiYT. It's like having a personal youtube recommendation bot at my fingertips!"</p>
+                    <small>- Farhan Ali</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2>About LabiYT</h2>
+        <div class="about-section">
+            <p>Unlike traditional recommendation systems, LabiYT offers advanced features that diverse user needs. With its intuitive interface and multi-language support, LabiYT ensures a seamless experience for users worldwide.</p>
+        
+            <p>Key features of LabiYT include:</p>
+            <ul>
+                <li><strong>Personalized Recommendations:</strong> LabiYT tailors recommendations based on individual user preferences, ensuring each user receives content that aligns with their interests and viewing habits.</li>
+                <li><strong>Real-time Adaptation:</strong> The bot continuously learns and adapts to user behavior, providing up-to-date recommendations that reflect evolving interests and preferences.</li>
+                <li><strong>Content Diversity:</strong> LabiYT strives to present a diverse range of content to users, introducing them to new topics, creators, and perspectives to enrich their YouTube experience.</li>
+                <li><strong>Multi-language Support:</strong> LabiYT is equipped with multi-language capabilities, allowing users from various linguistic backgrounds to enjoy personalized recommendations in their preferred language.</li>
+            </ul>
+            
+            <p>LabiYT aims to enhance user satisfaction by reducing the time spent searching for relevant content and increasing engagement with the platform. By delivering personalized recommendations that resonate with each user's unique interests and gives fulfilling YouTube experience for all.</p>
+        </div>
+    </div>
+    
+    
+</section>
+
+
+<!-- FAQ Section -->
+<section id="faq" class="faq">
+    <div class="container">
+        <h2>FAQ</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card faq-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Is LabiYT compatible with all devices?</h3>
+                        <p class="card-text">Yes, LabiYT is compatible with smartphones, tablets, and computers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card faq-card">
+                    <div class="card-body">
+                        <h3 class="card-title">How accurate is LabiYT?</h3>
+                        <p class="card-text">LabiYT strives for high accuracy in its responses. However, like any recommendation system, its accuracy may vary depending on the complexity of the query and the quality of the input.</p>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+</section>
+
+
+<!-- Contact Us Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>Fell free to cantact us with this email.</p>
+            <p>Email: <a href="mailto:labib12148@gmail.com">labib12148@gmail.com</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <p>&copy; 2024 LabiYT. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>

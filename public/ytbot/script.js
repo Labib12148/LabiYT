@@ -1,6 +1,6 @@
 let memory = {
-    lastPrompt: "", // To store the last prompt given by the user
-    chatHistory: [] // Array to store all previous messages
+    lastPrompt: "",
+    chatHistory: []
 };
 
 document.getElementById("prompt").addEventListener("keypress", async function(event) {
@@ -37,23 +37,23 @@ async function sendMessage() {
             });
             const data = await response.json();
 
-            // Display YTAdvisor response in chat
+            // Display LabiYT response in chat
             if (data.response) {
-                displayMessage("YTAdvisor", data.response);
+                displayMessage("LabiYT", data.response);
                 // Update chat history
-                memory.chatHistory.push({ sender: "YTAdvisor", message: data.response });
+                memory.chatHistory.push({ sender: "LabiYT", message: data.response });
                 saveChatHistory(); // Save chat history after each update
             } else {
-                displayMessage("YTAdvisor", "I can't assist with that. Try generating something else.");
+                displayMessage("LabiYT", "I can't assist with that. Try generating something else.");
                 // Update chat history
-                memory.chatHistory.push({ sender: "YTAdvisor", message: "I can't assist with that. Try generating something else." });
+                memory.chatHistory.push({ sender: "LabiYT", message: "I can't assist with that. Try generating something else." });
                 saveChatHistory(); // Save chat history after each update
             }
         } catch (error) {
             console.error("Error generating content:", error.message);
-            displayMessage("YTAdvisor", "I can't assist with that.");
+            displayMessage("LabiYT", "I can't assist with that.");
             // Update chat history
-            memory.chatHistory.push({ sender: "YTAdvisor", message: "I can't assist with that. Try generating something else." });
+            memory.chatHistory.push({ sender: "LabiYT", message: "I can't assist with that. Try generating something else." });
             saveChatHistory(); // Save chat history after each update
         }
 
@@ -120,14 +120,14 @@ async function displayMessage(sender, message) {
             if (sender === "You") {
                 messageElement.classList.add("user-message");
                 const userImageElement = document.createElement('img');
-                userImageElement.src = "user.png";
+                userImageElement.src = "./assets/user.png";
                 userImageElement.classList.add('avatar');
                 userImageElement.style.width = '30px';
                 messageElement.appendChild(userImageElement);
-            } else if (sender === "YTAdvisor") {
-                messageElement.classList.add("YTAdvisor-message");
+            } else if (sender === "LabiYT") {
+                messageElement.classList.add("LabiYT-message");
                 const chatImageElement = document.createElement('img');
-                chatImageElement.src = "chat.png";
+                chatImageElement.src = "./assets/chat.png";
                 chatImageElement.classList.add('avatar');
                 chatImageElement.style.width = '30px';
                 messageElement.appendChild(chatImageElement);
@@ -155,8 +155,8 @@ async function displayMessage(sender, message) {
             chatContainer.appendChild(lineBreak);
         }
 
-        // Add typing animation for YTAdvisor's response
-        if (sender === "YTAdvisor") {
+        // Add typing animation for LabiYT's response
+        if (sender === "LabiYT") {
             await sleep(60 + Math.random() * 50); // Adjust timing as needed
         }
     }
